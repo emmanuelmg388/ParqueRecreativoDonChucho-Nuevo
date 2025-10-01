@@ -64,7 +64,7 @@ namespace CapaDatos
         }
 
         // Buscar
-        public DataTable BuscarJuego(string codigoJuego)
+        public DataRow BuscarJuego(string codigoJuego)
         {
             DataTable dt = new DataTable();
             using (MySqlConnection con = new MySqlConnection(cadena))
@@ -75,7 +75,14 @@ namespace CapaDatos
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
             }
-            return dt;
+            if (dt.Rows.Count > 0)
+            {
+                return dt.Rows[0];
+            }
+            else
+            {
+                return null;
+            }
         }
 
         // Listar
