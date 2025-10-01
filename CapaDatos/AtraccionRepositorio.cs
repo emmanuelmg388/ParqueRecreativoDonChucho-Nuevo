@@ -64,7 +64,7 @@ namespace CapaDatos
         }
 
         // Buscar
-        public DataRow BuscarAtraccion(string codigoAtraccion)
+        public DataTable BuscarAtraccion(string codigoAtraccion)
         {
             DataTable dt = new DataTable();
             using (MySqlConnection con = new MySqlConnection(cadena))
@@ -75,15 +75,9 @@ namespace CapaDatos
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
             }
-            if (dt.Rows.Count > 0)
-            {
-                return dt.Rows[0];
-            }
-            else
-            {
-                return null;
-            }
+            return dt;
         }
+
 
         // Listar
         public DataTable ListarAtracciones()
