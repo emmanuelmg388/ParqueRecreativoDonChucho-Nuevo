@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using CapaDatos;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 
 namespace CapaNegocio

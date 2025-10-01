@@ -42,16 +42,9 @@ namespace CapaNegocio
             });
         }
 
-        public Atraccion Buscar(string id)
+        public DataTable Buscar(string id)
         {
-            DataRow result = objCD.BuscarAtraccion(id);
-            return new Atraccion() 
-            {
-                id = result["CodigoAtraccion"].ToString(),
-                nombre = result["Nombre"].ToString(),
-                precio = decimal.Parse(result["Precio"].ToString()),
-                capacidad = int.Parse(result["Capacidad"].ToString())
-            };
+            return objCD.BuscarAtraccion(id);
         }
 
         public DataTable Listar()

@@ -30,10 +30,11 @@ namespace ParqueRecreativoDonChucho_ASP.NET
 
         protected void btn_BuscarAtraccionUpd_Click(object sender, EventArgs e)
         {
-            Atraccion result = objCN.Buscar(txt_CodigoAtraccionUpd.Text);
-            txt_NombreAtraccionUpd.Text = result.nombre;
-            txt_CapacidadMaximaUpd.Text = result.nombre;
-            txt_PrecioEntradaUpd.Text = result.nombre;
+            DataTable result = objCN.Buscar(txt_CodigoAtraccionUpd.Text);
+            DataRow data = result.Rows[0];
+            txt_NombreAtraccionUpd.Text = data["Nombre"].ToString();
+            txt_CapacidadMaximaUpd.Text = data["CapacidadMaxima"].ToString();
+            txt_PrecioEntradaUpd.Text = data["PrecioEntrada"].ToString();
         }
 
         protected void btn_ActualizarAtraccion_Click(object sender, EventArgs e)
@@ -49,15 +50,13 @@ namespace ParqueRecreativoDonChucho_ASP.NET
 
         protected void btn_BuscarAtraccion_Click(object sender, EventArgs e)
         {
-            Atraccion result = objCN.Buscar(txt_BuscarAtraccion.Text);
-            gv_Atracciones.DataSource = result;
+            gv_Atracciones.DataSource = objCN.Buscar(txt_BuscarAtraccion.Text);
             gv_Atracciones.DataBind();
         }
 
         protected void btn_ListarAtracciones_Click(object sender, EventArgs e)
         {
-            DataTable result = objCN.Listar();
-            gv_Atracciones.DataSource = result;
+            gv_Atracciones.DataSource = objCN.Listar();
             gv_Atracciones.DataBind();
         }
     }
