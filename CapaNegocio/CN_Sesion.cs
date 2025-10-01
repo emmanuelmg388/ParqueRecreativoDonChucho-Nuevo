@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Deployment.Internal;
 
 namespace CapaNegocio
 {
@@ -31,6 +33,16 @@ namespace CapaNegocio
                 HoraInicio = obj.inicio,
                 BoletosVendidos = obj.boletos
             });
+        }
+
+        public DataTable Buscar(string id)
+        {
+            return objCD.BuscarSesion(int.Parse(id));
+        }
+
+        public DataTable Listar()
+        {
+            return objCD.ListarSesiones();
         }
     }
 }
