@@ -20,13 +20,13 @@ namespace CapaDatos
         {
             using (MySqlConnection con = new MySqlConnection(cadena))
             {
-                sql = @"INSERT INTO atraccion(CodigoAtraccion, Nombre, Precio, Capacidad) 
-                        VALUES(@CodigoAtraccion, @Nombre, @Precio, @Capacidad)";
+                sql = @"INSERT INTO atraccion(CodigoAtraccion, Nombre, PrecioEntrada, CapacidadMaxima) 
+                        VALUES(@CodigoAtraccion, @Nombre, @PrecioEntrada, @CapacidadMaxima)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@CodigoAtraccion", a.CodigoAtraccion);
                 cmd.Parameters.AddWithValue("@Nombre", a.Nombre);
-                cmd.Parameters.AddWithValue("@Precio", a.Precio);
-                cmd.Parameters.AddWithValue("@Capacidad", a.Capacidad);
+                cmd.Parameters.AddWithValue("@PrecioEntrada", a.PrecioEntrada);
+                cmd.Parameters.AddWithValue("@CapacidadMaxima", a.CapacidadMaxima);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -38,13 +38,13 @@ namespace CapaDatos
             using (MySqlConnection con = new MySqlConnection(cadena))
             {
                 sql = @"UPDATE atraccion 
-                        SET Nombre=@Nombre, Precio=@Precio, Capacidad=@Capacidad
+                        SET Nombre=@Nombre, PrecioEntrada=@PrecioEntrada, CapacidadMaxima=@CapacidadMaxima
                         WHERE CodigoAtraccion=@CodigoAtraccion";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@CodigoAtraccion", a.CodigoAtraccion);
                 cmd.Parameters.AddWithValue("@Nombre", a.Nombre);
-                cmd.Parameters.AddWithValue("@Precio", a.Precio);
-                cmd.Parameters.AddWithValue("@Capacidad", a.Capacidad);
+                cmd.Parameters.AddWithValue("@PrecioEntrada", a.PrecioEntrada);
+                cmd.Parameters.AddWithValue("@CapacidadMaxima", a.CapacidadMaxima);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -64,7 +64,7 @@ namespace CapaDatos
         }
 
         // Buscar
-        public DataRow BuscarAtraccion(string codigoAtraccion)
+        public DataTable BuscarAtraccion(string codigoAtraccion)
         {
             DataTable dt = new DataTable();
             using (MySqlConnection con = new MySqlConnection(cadena))
@@ -75,15 +75,9 @@ namespace CapaDatos
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
             }
-            if (dt.Rows.Count > 0)
-            {
-                return dt.Rows[0];
-            }
-            else
-            {
-                return null;
-            }
+            return dt;
         }
+
 
         // Listar
         public DataTable ListarAtracciones()

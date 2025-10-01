@@ -26,8 +26,8 @@ namespace CapaNegocio
             {
                 CodigoAtraccion = obj.id,
                 Nombre = obj.nombre,
-                Precio = obj.precio,
-                Capacidad = obj.capacidad,
+                PrecioEntrada = obj.precio,
+                CapacidadMaxima = obj.capacidad,
             });
         }
 
@@ -37,8 +37,8 @@ namespace CapaNegocio
             {
                 CodigoAtraccion = obj.id,
                 Nombre = obj.nombre,
-                Precio = obj.precio,
-                Capacidad = obj.capacidad,
+                PrecioEntrada = obj.precio,
+                CapacidadMaxima = obj.capacidad,
             });
         }
 

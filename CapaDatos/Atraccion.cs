@@ -10,8 +10,8 @@ namespace CapaDatos
     {
         public string CodigoAtraccion { get; set; }
         public string Nombre { get; set; }
-        public decimal Precio { get; set; }
-        public int Capacidad{ get; set; }
+        public decimal PrecioEntrada { get; set; }
+        public int CapacidadMaxima{ get; set; }
 
     }
 }
