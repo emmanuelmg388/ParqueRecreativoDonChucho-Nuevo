@@ -35,7 +35,7 @@
 
         <div class="form-actions">
             <asp:Button ID="btn_RegistrarAtraccion" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="btn_RegistrarAtraccion_Click" />
-            <asp:Button ID="btn_LimpiarRegistro" runat="server" Text="Limpiar" CssClass="btn btn-secondary" />
+            <asp:Button ID="btn_LimpiarRegistro" runat="server" Text="Limpiar" CssClass="btn btn-secondary" OnClick="btn_LimpiarRegistro_Click" />
         </div>
     </div>
 
@@ -70,7 +70,7 @@
 
         <div class="form-actions">
             <asp:Button ID="btn_ActualizarAtraccion" runat="server" Text="Actualizar" CssClass="btn btn-warning" Enabled="false" OnClick="btn_ActualizarAtraccion_Click" />
-            <asp:Button ID="btn_CancelarUpd" runat="server" Text="Cancelar" CssClass="btn btn-secondary" />
+            <asp:Button ID="btn_CancelarUpd" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="btn_CancelarUpd_Click" />
         </div>
     </div>
 

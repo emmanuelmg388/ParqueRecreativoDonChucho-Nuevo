@@ -39,5 +39,13 @@ namespace ParqueRecreativoDonChucho_ASP.NET
             gv_Sesiones.DataSource = objCN.Listar();
             gv_Sesiones.DataBind();
         }
+
+        protected void btn_LimpiarSesion_Click(object sender, EventArgs e)
+        {
+            ddl_CodigoAtraccion.Text = "-- Seleccione --";
+            ddl_CodigoJuego.Text = "-- Seleccione --";
+            txt_NumeroZona.Text = string.Empty;
+            txt_BoletosVendidos.Text = string.Empty;
+        }
     }
 }

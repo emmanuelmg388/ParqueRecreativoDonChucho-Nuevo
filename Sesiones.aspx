@@ -43,8 +43,8 @@
         </div>
 
         <div class="form-actions">
-            <asp:Button ID="btn_RegistrarSesion" runat="server" Text="Registrar" CssClass="btn btn-primary" />
-            <asp:Button ID="btn_LimpiarSesion" runat="server" Text="Limpiar" CssClass="btn btn-secondary" />
+            <asp:Button ID="btn_RegistrarSesion" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="btn_RegistrarSesion_Click" />
+            <asp:Button ID="btn_LimpiarSesion" runat="server" Text="Limpiar" CssClass="btn btn-secondary" OnClick="btn_LimpiarSesion_Click" />
         </div>
     </div>
 

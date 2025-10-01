@@ -59,5 +59,21 @@ namespace ParqueRecreativoDonChucho_ASP.NET
             gv_Atracciones.DataSource = objCN.Listar();
             gv_Atracciones.DataBind();
         }
+
+        protected void btn_LimpiarRegistro_Click(object sender, EventArgs e)
+        {
+            txt_CodigoAtraccion.Text = string.Empty;
+            txt_NombreAtraccion.Text = string.Empty;
+            txt_PrecioEntrada.Text = string.Empty;
+            txt_CapacidadMaxima.Text = string.Empty;
+        }
+
+        protected void btn_CancelarUpd_Click(object sender, EventArgs e)
+        {
+            txt_CodigoAtraccionUpd.Text = string.Empty;
+            txt_NombreAtraccionUpd.Text = string.Empty;
+            txt_PrecioEntradaUpd.Text = string.Empty;
+            txt_CapacidadMaximaUpd.Text = string.Empty;
+        }
     }
 }
