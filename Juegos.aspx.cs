@@ -31,7 +31,7 @@ namespace ParqueRecreativoDonChucho_ASP.NET
 
         protected void btn_BuscarJuego_Click(object sender, EventArgs e)
         {
-            gv_Juegos.DataSource =  objCN.Buscar(txt_BuscarJuego.Text);
+            gv_Juegos.DataSource = objCN.Buscar(txt_BuscarJuego.Text);
             gv_Juegos.DataBind();
         }
 

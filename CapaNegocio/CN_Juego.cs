@@ -27,7 +27,7 @@ namespace CapaNegocio
 
         }
 
-        public DataRow Buscar(string id)
+        public DataTable Buscar(string id)
         {
             return objCD.BuscarJuego(id);
         }
