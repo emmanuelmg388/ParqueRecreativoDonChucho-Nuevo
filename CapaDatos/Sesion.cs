@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    internal class Sesion
+    public class Sesion
     {
+        public int IdSesion { get; set; }             
+        public string CodigoAtraccion { get; set; }    
+        public string CodigoJuego { get; set; }        
+        public int NumeroZona { get; set; }
+        public DateTime HoraInicio { get; set; }
+        public int BoletosVendidos { get; set; }
     }
 }
