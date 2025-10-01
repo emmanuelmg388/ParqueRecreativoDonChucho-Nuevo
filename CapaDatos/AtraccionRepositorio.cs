@@ -20,13 +20,13 @@ namespace CapaDatos
         {
             using (MySqlConnection con = new MySqlConnection(cadena))
             {
-                sql = @"INSERT INTO atraccion(CodigoAtraccion, Nombre, Precio, Capacidad) 
-                        VALUES(@CodigoAtraccion, @Nombre, @Precio, @Capacidad)";
+                sql = @"INSERT INTO atraccion(CodigoAtraccion, Nombre, PrecioEntrada, CapacidadMaxima) 
+                        VALUES(@CodigoAtraccion, @Nombre, @PrecioEntrada, @CapacidadMaxima)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@CodigoAtraccion", a.CodigoAtraccion);
                 cmd.Parameters.AddWithValue("@Nombre", a.Nombre);
-                cmd.Parameters.AddWithValue("@Precio", a.Precio);
-                cmd.Parameters.AddWithValue("@Capacidad", a.Capacidad);
+                cmd.Parameters.AddWithValue("@PrecioEntrada", a.PrecioEntrada);
+                cmd.Parameters.AddWithValue("@CapacidadMaxima", a.CapacidadMaxima);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -38,13 +38,13 @@ namespace CapaDatos
             using (MySqlConnection con = new MySqlConnection(cadena))
             {
                 sql = @"UPDATE atraccion 
-                        SET Nombre=@Nombre, Precio=@Precio, Capacidad=@Capacidad
+                        SET Nombre=@Nombre, PrecioEntrada=@PrecioEntrada, CapacidadMaxima=@CapacidadMaxima
                         WHERE CodigoAtraccion=@CodigoAtraccion";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@CodigoAtraccion", a.CodigoAtraccion);
                 cmd.Parameters.AddWithValue("@Nombre", a.Nombre);
-                cmd.Parameters.AddWithValue("@Precio", a.Precio);
-                cmd.Parameters.AddWithValue("@Capacidad", a.Capacidad);
+                cmd.Parameters.AddWithValue("@PrecioEntrada", a.PrecioEntrada);
+                cmd.Parameters.AddWithValue("@CapacidadMaxima", a.CapacidadMaxima);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }

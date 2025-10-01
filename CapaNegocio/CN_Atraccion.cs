@@ -26,8 +26,8 @@ namespace CapaNegocio
             {
                 CodigoAtraccion = obj.id,
                 Nombre = obj.nombre,
-                Precio = obj.precio,
-                Capacidad = obj.capacidad,
+                PrecioEntrada = obj.precio,
+                CapacidadMaxima = obj.capacidad,
             });
         }
 
@@ -37,8 +37,8 @@ namespace CapaNegocio
             {
                 CodigoAtraccion = obj.id,
                 Nombre = obj.nombre,
-                Precio = obj.precio,
-                Capacidad = obj.capacidad,
+                PrecioEntrada = obj.precio,
+                CapacidadMaxima = obj.capacidad,
             });
         }
 
@@ -49,8 +49,8 @@ namespace CapaNegocio
             {
                 id = result["CodigoAtraccion"].ToString(),
                 nombre = result["Nombre"].ToString(),
-                precio = decimal.Parse(result["Precio"].ToString()),
-                capacidad = int.Parse(result["Capacidad"].ToString())
+                precio = decimal.Parse(result["PrecioEntrada"].ToString()),
+                capacidad = int.Parse(result["CapacidadMaxima"].ToString())
             };
         }
 
