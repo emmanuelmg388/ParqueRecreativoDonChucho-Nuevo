@@ -42,7 +42,7 @@
         </div>
 
         <div class="form-actions">
-            <asp:Button ID="btn_RegistrarJuego" runat="server" Text="Registrar" CssClass="btn btn-primary" />
+            <asp:Button ID="btn_RegistrarJuego" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="btn_RegistrarJuego_Click" />
             <asp:Button ID="btn_LimpiarCampos" runat="server" Text="Limpiar" CssClass="btn btn-secondary" />
         </div>
     </div>
@@ -55,8 +55,8 @@
         <div class="form-group">
             <asp:TextBox ID="txt_BuscarJuego" runat="server" CssClass="form-control" Placeholder="Ingrese código o nombre del juego..." />
         </div>
-        <asp:Button ID="btn_BuscarJuego" runat="server" Text="Buscar" CssClass="btn btn-info" />
-        <asp:Button ID="btn_ListarTodos" runat="server" Text="Listar Todos" CssClass="btn btn-success" />
+        <asp:Button ID="btn_BuscarJuego" runat="server" Text="Buscar" CssClass="btn btn-info" OnClick="btn_BuscarJuego_Click" />
+        <asp:Button ID="btn_ListarTodos" runat="server" Text="Listar Todos" CssClass="btn btn-success" OnClick="btn_ListarTodos_Click" />
     </div>
 
     <br />

@@ -11,7 +11,7 @@ namespace CapaNegocio
 {
     public struct Juego
     {
-        public readonly string id;
+        public string id;
         public string nombre;
         public int duracion;
         public string categoria;
@@ -32,10 +32,9 @@ namespace CapaNegocio
 
         }
 
-        public Juego Buscar(string id)
+        public DataRow Buscar(string id)
         {
-            Juego result = new Juego();
-            return result;
+            return objCD.BuscarJuego(id);
         }
 
         public DataTable Listar()
