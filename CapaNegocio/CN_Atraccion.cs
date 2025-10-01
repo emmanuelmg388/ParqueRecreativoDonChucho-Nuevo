@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Data;
+using CapaDatos;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,14 +18,28 @@ namespace CapaNegocio
 
     public class CN_Atraccion
     {
+        private readonly AtraccionRepositorio objCD = new AtraccionRepositorio();
+
         public void Crear(Atraccion obj)
         {
-
+            objCD.InsertarAtraccion(new CapaDatos.Atraccion()
+            {
+                CodigoAtraccion = obj.id,
+                Nombre = obj.nombre,
+                Precio = obj.precio,
+                Capacidad = obj.capacidad,
+            });
         }
 
         public void Actualizar(Atraccion obj)
         {
-
+            objCD.ActualizarAtraccion(new CapaDatos.Atraccion()
+            {
+                CodigoAtraccion = obj.id,
+                Nombre = obj.nombre,
+                Precio = obj.precio,
+                Capacidad = obj.capacidad,
+            });
         }
 
         public Atraccion Buscar(string id)
@@ -33,9 +48,9 @@ namespace CapaNegocio
             return result;
         }
 
-        public List<Atraccion> Listar()
+        public DataTable Listar()
         {
-            return null;
+            return objCD.ListarAtracciones();
         }
     }
 }
