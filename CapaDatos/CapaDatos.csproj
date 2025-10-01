@@ -98,6 +98,8 @@
     <Compile Include="Juego.cs" />
     <Compile Include="JuegoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sesion.cs" />
+    <Compile Include="SesionRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

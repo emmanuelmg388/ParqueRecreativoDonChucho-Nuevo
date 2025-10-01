@@ -34,7 +34,7 @@
         </div>
 
         <div class="form-actions">
-            <asp:Button ID="btn_RegistrarAtraccion" runat="server" Text="Registrar" CssClass="btn btn-primary" />
+            <asp:Button ID="btn_RegistrarAtraccion" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="btn_RegistrarAtraccion_Click" />
             <asp:Button ID="btn_LimpiarRegistro" runat="server" Text="Limpiar" CssClass="btn btn-secondary" />
         </div>
     </div>
@@ -49,7 +49,7 @@
         <div class="form-group">
             <label for="txt_CodigoAtraccionUpd">Código de Atracción:</label>
             <asp:TextBox ID="txt_CodigoAtraccionUpd" runat="server" CssClass="form-control" />
-            <asp:Button ID="btn_BuscarAtraccionUpd" runat="server" Text="Buscar" CssClass="btn btn-info" />
+            <asp:Button ID="btn_BuscarAtraccionUpd" runat="server" Text="Buscar" CssClass="btn btn-info" OnClick="btn_BuscarAtraccionUpd_Click" />
         </div>
 
         <!-- Estos campos estarán bloqueados hasta que se busque la atracción -->
@@ -69,7 +69,7 @@
         </div>
 
         <div class="form-actions">
-            <asp:Button ID="btn_ActualizarAtraccion" runat="server" Text="Actualizar" CssClass="btn btn-warning" Enabled="false" />
+            <asp:Button ID="btn_ActualizarAtraccion" runat="server" Text="Actualizar" CssClass="btn btn-warning" Enabled="false" OnClick="btn_ActualizarAtraccion_Click" />
             <asp:Button ID="btn_CancelarUpd" runat="server" Text="Cancelar" CssClass="btn btn-secondary" />
         </div>
     </div>
@@ -82,8 +82,8 @@
         <div class="form-group">
             <asp:TextBox ID="txt_BuscarAtraccion" runat="server" CssClass="form-control" Placeholder="Ingrese código o nombre de la atracción..." />
         </div>
-        <asp:Button ID="btn_BuscarAtraccion" runat="server" Text="Buscar" CssClass="btn btn-info" />
-        <asp:Button ID="btn_ListarAtracciones" runat="server" Text="Listar Todas" CssClass="btn btn-success" />
+        <asp:Button ID="btn_BuscarAtraccion" runat="server" Text="Buscar" CssClass="btn btn-info" OnClick="btn_BuscarAtraccion_Click" />
+        <asp:Button ID="btn_ListarAtracciones" runat="server" Text="Listar Todas" CssClass="btn btn-success" OnClick="btn_ListarAtracciones_Click" />
     </div>
 
     <br />

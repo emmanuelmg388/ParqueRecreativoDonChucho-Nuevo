@@ -9,7 +9,7 @@ namespace CapaNegocio
 {
     public struct Atraccion
     {
-        public readonly string id;
+        public string id;
         public string nombre;
         public decimal precio;
         public int capacidad;
@@ -44,8 +44,14 @@ namespace CapaNegocio
 
         public Atraccion Buscar(string id)
         {
-            Atraccion result = new Atraccion();
-            return result;
+            DataRow result = objCD.BuscarAtraccion(id);
+            return new Atraccion() 
+            {
+                id = result["CodigoAtraccion"].ToString(),
+                nombre = result["Nombre"].ToString(),
+                precio = decimal.Parse(result["Precio"].ToString()),
+                capacidad = int.Parse(result["Capacidad"].ToString())
+            };
         }
 
         public DataTable Listar()
