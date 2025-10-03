@@ -47,5 +47,10 @@ namespace ParqueRecreativoDonChucho_ASP.NET
             txt_NumeroZona.Text = string.Empty;
             txt_BoletosVendidos.Text = string.Empty;
         }
+
+        protected void btn_RegistrarSesion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
