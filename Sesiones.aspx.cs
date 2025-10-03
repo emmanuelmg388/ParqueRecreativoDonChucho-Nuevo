@@ -28,11 +28,13 @@ namespace ParqueRecreativoDonChucho_ASP.NET
             }
         }
 
+        /*
         protected void btn_BuscarSesion_Click(object sender, EventArgs e)
         {
             gv_Sesiones.DataSource = objCN.Buscar(txt_BuscarSesion.Text);
             gv_Sesiones.DataBind();
         }
+        */
 
         protected void btn_ListarSesiones_Click(object sender, EventArgs e)
         {
@@ -52,7 +54,7 @@ namespace ParqueRecreativoDonChucho_ASP.NET
         {
             objCN.Crear(new Sesion()
             {
-                id = txt_idsesion.Text,
+                //id = txt_idsesion.Text,
                 atraccion = ddl_CodigoAtraccion.Text,
                 juego = ddl_CodigoJuego.Text,
                 area = txt_NumeroZona.Text,

@@ -11,7 +11,7 @@ namespace CapaNegocio
 {
     public struct Sesion
     {
-        public string id;
+        //public string id;
         public string atraccion;
         public string juego;
         public string area;
@@ -26,7 +26,7 @@ namespace CapaNegocio
         {
             objCD.InsertarSesion(new CapaDatos.Sesion()
             {
-                IdSesion = int.Parse(obj.id),
+                //IdSesion = int.Parse(obj.id),
                 CodigoAtraccion = obj.atraccion,
                 CodigoJuego = obj.juego,
                 NumeroZona = int.Parse(obj.area),
