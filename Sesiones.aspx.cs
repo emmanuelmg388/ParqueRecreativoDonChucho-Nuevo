@@ -52,11 +52,11 @@ namespace ParqueRecreativoDonChucho_ASP.NET
         {
             objCN.Crear(new Sesion()
             {
-                id = "0",
+                id = txt_idsesion.Text,
                 atraccion = ddl_CodigoAtraccion.Text,
                 juego = ddl_CodigoJuego.Text,
                 area = txt_NumeroZona.Text,
-                // Fecha
+                inicio = DateTime.Parse(txt_HoraInicio.Text),
                 boletos = int.Parse(txt_BoletosVendidos.Text)
             });
         }

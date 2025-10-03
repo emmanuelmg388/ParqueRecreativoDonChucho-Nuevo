@@ -14,6 +14,11 @@
         <h3>Registrar Nueva Sesión</h3>
 
         <div class="form-group">
+            <label for="txt_IdSesion">ID de Sesion:</label>
+            <asp:TextBox ID="txt_idsesion" runat="server" CssClass="form-control" />
+        </div>
+
+        <div class="form-group">
             <label for="ddl_CodigoAtraccion">Código de Atracción:</label>
             <asp:DropDownList ID="ddl_CodigoAtraccion" runat="server" CssClass="form-control">
                 <asp:ListItem Text="-- Seleccione --" Value="" />

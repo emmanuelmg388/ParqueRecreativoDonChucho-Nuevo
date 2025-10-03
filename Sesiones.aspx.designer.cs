@@ -15,6 +15,15 @@ namespace ParqueRecreativoDonChucho_ASP.NET
     {
 
         /// <summary>
+        /// Control txt_idsesion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_idsesion;
+
+        /// <summary>
         /// Control ddl_CodigoAtraccion.
         /// </summary>
         /// <remarks>
