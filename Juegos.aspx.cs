@@ -46,7 +46,7 @@ namespace ParqueRecreativoDonChucho_ASP.NET
             txt_CodigoJuego.Text = string.Empty;
             txt_Duracion.Text = string.Empty;
             txt_NombreJuego.Text = string.Empty;
-            ddl_Categoria.Text = "-- Seleccione --";
+            ddl_Categoria.SelectedIndex = 0;
         }
     }
 }

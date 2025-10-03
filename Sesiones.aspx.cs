@@ -44,8 +44,8 @@ namespace ParqueRecreativoDonChucho_ASP.NET
 
         protected void btn_LimpiarSesion_Click(object sender, EventArgs e)
         {
-            ddl_CodigoAtraccion.Text = "-- Seleccione --";
-            ddl_CodigoJuego.Text = "-- Seleccione --";
+            ddl_CodigoAtraccion.SelectedIndex = 0;
+            ddl_CodigoJuego.SelectedIndex = 0;
             txt_NumeroZona.Text = string.Empty;
             txt_BoletosVendidos.Text = string.Empty;
         }
