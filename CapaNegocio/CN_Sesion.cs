@@ -11,9 +11,9 @@ namespace CapaNegocio
 {
     public struct Sesion
     {
-        public readonly string id;
-        public readonly string atraccion;
-        public readonly string juego;
+        public string id;
+        public string atraccion;
+        public string juego;
         public string area;
         public DateTime inicio;
         public int boletos;

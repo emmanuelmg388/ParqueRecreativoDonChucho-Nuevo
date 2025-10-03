@@ -24,7 +24,7 @@ namespace ParqueRecreativoDonChucho_ASP.NET
 
             foreach (DataRow item in objJuego.Listar().Rows)
             {
-                ddl_CodigoAtraccion.Items.Add(item[0].ToString());
+                ddl_CodigoJuego.Items.Add(item[0].ToString());
             }
         }
 
@@ -50,7 +50,15 @@ namespace ParqueRecreativoDonChucho_ASP.NET
 
         protected void btn_RegistrarSesion_Click(object sender, EventArgs e)
         {
-
+            objCN.Crear(new Sesion()
+            {
+                id = "0",
+                atraccion = ddl_CodigoAtraccion.Text,
+                juego = ddl_CodigoJuego.Text,
+                area = txt_NumeroZona.Text,
+                // Fecha
+                boletos = int.Parse(txt_BoletosVendidos.Text)
+            });
         }
     }
 }
