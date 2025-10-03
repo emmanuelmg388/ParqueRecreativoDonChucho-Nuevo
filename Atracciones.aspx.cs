@@ -40,6 +40,7 @@ namespace ParqueRecreativoDonChucho_ASP.NET
             txt_NombreAtraccionUpd.Enabled = true;
             txt_PrecioEntradaUpd.Enabled = true;
             txt_CapacidadMaximaUpd.Enabled = true;
+            btn_ActualizarAtraccion.Enabled = true;
         }
 
         protected void btn_ActualizarAtraccion_Click(object sender, EventArgs e)
@@ -84,6 +85,7 @@ namespace ParqueRecreativoDonChucho_ASP.NET
             txt_NombreAtraccionUpd.Enabled = false;
             txt_PrecioEntradaUpd.Enabled = false;
             txt_CapacidadMaximaUpd.Enabled = false;
+            btn_ActualizarAtraccion.Enabled = false;
         }
     }
 }
