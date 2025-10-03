@@ -78,24 +78,6 @@ namespace ParqueRecreativoDonChucho_ASP.NET
         protected global::System.Web.UI.WebControls.Button btn_LimpiarSesion;
 
         /// <summary>
-        /// Control txt_BuscarSesion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_BuscarSesion;
-
-        /// <summary>
-        /// Control btn_BuscarSesion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_BuscarSesion;
-
-        /// <summary>
         /// Control btn_ListarSesiones.
         /// </summary>
         /// <remarks>

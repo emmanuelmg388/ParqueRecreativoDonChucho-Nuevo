@@ -53,11 +53,7 @@
     <!-- ================= SECCIÓN BUSCAR Y LISTAR ================= -->
     <div class="search-container">
         <h3>Buscar Sesiones</h3>
-        <!--
-        <div class="form-group">
-            <asp:TextBox ID="txt_BuscarSesion" runat="server" CssClass="form-control" Placeholder="Ingrese código de atracción o juego..." Width="225px" />
-        </div>
-        <asp:Button ID="btn_BuscarSesion" runat="server" Text="Buscar" CssClass="btn btn-info" OnClick="btn_BuscarSesion_Click" /> -->
+        
         <asp:Button ID="btn_ListarSesiones" runat="server" Text="Listar Todas" CssClass="btn btn-success" OnClick="btn_ListarSesiones_Click" />
     </div>
 
